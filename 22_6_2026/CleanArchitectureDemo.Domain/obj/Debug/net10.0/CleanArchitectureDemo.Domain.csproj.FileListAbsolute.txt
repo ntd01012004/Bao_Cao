@@ -1,0 +1,12 @@
+C:\Users\Lenovo\DemoNet8Api\22_6_2026\CleanArchitectureDemo.Domain\bin\Debug\net10.0\CleanArchitectureDemo.Domain.deps.json
+C:\Users\Lenovo\DemoNet8Api\22_6_2026\CleanArchitectureDemo.Domain\bin\Debug\net10.0\CleanArchitectureDemo.Domain.dll
+C:\Users\Lenovo\DemoNet8Api\22_6_2026\CleanArchitectureDemo.Domain\bin\Debug\net10.0\CleanArchitectureDemo.Domain.pdb
+C:\Users\Lenovo\DemoNet8Api\22_6_2026\CleanArchitectureDemo.Domain\obj\Debug\net10.0\CleanArchitectureDemo.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Lenovo\DemoNet8Api\22_6_2026\CleanArchitectureDemo.Domain\obj\Debug\net10.0\CleanArchitectureDemo.Domain.AssemblyInfoInputs.cache
+C:\Users\Lenovo\DemoNet8Api\22_6_2026\CleanArchitectureDemo.Domain\obj\Debug\net10.0\CleanArchitectureDemo.Domain.AssemblyInfo.cs
+C:\Users\Lenovo\DemoNet8Api\22_6_2026\CleanArchitectureDemo.Domain\obj\Debug\net10.0\CleanArchitectureDemo.Domain.csproj.CoreCompileInputs.cache
+C:\Users\Lenovo\DemoNet8Api\22_6_2026\CleanArchitectureDemo.Domain\obj\Debug\net10.0\CleanArchitectureDemo.Domain.sourcelink.json
+C:\Users\Lenovo\DemoNet8Api\22_6_2026\CleanArchitectureDemo.Domain\obj\Debug\net10.0\CleanArchitectureDemo.Domain.dll
+C:\Users\Lenovo\DemoNet8Api\22_6_2026\CleanArchitectureDemo.Domain\obj\Debug\net10.0\refint\CleanArchitectureDemo.Domain.dll
+C:\Users\Lenovo\DemoNet8Api\22_6_2026\CleanArchitectureDemo.Domain\obj\Debug\net10.0\CleanArchitectureDemo.Domain.pdb
+C:\Users\Lenovo\DemoNet8Api\22_6_2026\CleanArchitectureDemo.Domain\obj\Debug\net10.0\ref\CleanArchitectureDemo.Domain.dll
