@@ -1,0 +1,39 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v10.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v10.0": {
+      "MiniDddCqrsJwt.Application/1.0.0": {
+        "dependencies": {
+          "MiniDddCqrsJwt.Domain": "1.0.0"
+        },
+        "runtime": {
+          "MiniDddCqrsJwt.Application.dll": {}
+        }
+      },
+      "MiniDddCqrsJwt.Domain/1.0.0": {
+        "runtime": {
+          "MiniDddCqrsJwt.Domain.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "MiniDddCqrsJwt.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "MiniDddCqrsJwt.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

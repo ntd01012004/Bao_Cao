@@ -1,0 +1,16 @@
+C:\Users\Lenovo\DemoNet8Api\23_6_2026\MiniDddCqrsJwt.Application\bin\Debug\net10.0\MiniDddCqrsJwt.Application.deps.json
+C:\Users\Lenovo\DemoNet8Api\23_6_2026\MiniDddCqrsJwt.Application\bin\Debug\net10.0\MiniDddCqrsJwt.Application.dll
+C:\Users\Lenovo\DemoNet8Api\23_6_2026\MiniDddCqrsJwt.Application\bin\Debug\net10.0\MiniDddCqrsJwt.Application.pdb
+C:\Users\Lenovo\DemoNet8Api\23_6_2026\MiniDddCqrsJwt.Application\bin\Debug\net10.0\MiniDddCqrsJwt.Domain.dll
+C:\Users\Lenovo\DemoNet8Api\23_6_2026\MiniDddCqrsJwt.Application\bin\Debug\net10.0\MiniDddCqrsJwt.Domain.pdb
+C:\Users\Lenovo\DemoNet8Api\23_6_2026\MiniDddCqrsJwt.Application\obj\Debug\net10.0\MiniDddCqrsJwt.Application.csproj.AssemblyReference.cache
+C:\Users\Lenovo\DemoNet8Api\23_6_2026\MiniDddCqrsJwt.Application\obj\Debug\net10.0\MiniDddCqrsJwt.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Lenovo\DemoNet8Api\23_6_2026\MiniDddCqrsJwt.Application\obj\Debug\net10.0\MiniDddCqrsJwt.Application.AssemblyInfoInputs.cache
+C:\Users\Lenovo\DemoNet8Api\23_6_2026\MiniDddCqrsJwt.Application\obj\Debug\net10.0\MiniDddCqrsJwt.Application.AssemblyInfo.cs
+C:\Users\Lenovo\DemoNet8Api\23_6_2026\MiniDddCqrsJwt.Application\obj\Debug\net10.0\MiniDddCqrsJwt.Application.csproj.CoreCompileInputs.cache
+C:\Users\Lenovo\DemoNet8Api\23_6_2026\MiniDddCqrsJwt.Application\obj\Debug\net10.0\MiniDddCqrsJwt.Application.sourcelink.json
+C:\Users\Lenovo\DemoNet8Api\23_6_2026\MiniDddCqrsJwt.Application\obj\Debug\net10.0\MiniDddC.B10842C0.Up2Date
+C:\Users\Lenovo\DemoNet8Api\23_6_2026\MiniDddCqrsJwt.Application\obj\Debug\net10.0\MiniDddCqrsJwt.Application.dll
+C:\Users\Lenovo\DemoNet8Api\23_6_2026\MiniDddCqrsJwt.Application\obj\Debug\net10.0\refint\MiniDddCqrsJwt.Application.dll
+C:\Users\Lenovo\DemoNet8Api\23_6_2026\MiniDddCqrsJwt.Application\obj\Debug\net10.0\MiniDddCqrsJwt.Application.pdb
+C:\Users\Lenovo\DemoNet8Api\23_6_2026\MiniDddCqrsJwt.Application\obj\Debug\net10.0\ref\MiniDddCqrsJwt.Application.dll

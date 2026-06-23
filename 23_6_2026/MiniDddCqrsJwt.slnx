@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="MiniDddCqrsJwt.Api/MiniDddCqrsJwt.Api.csproj" />
+  <Project Path="MiniDddCqrsJwt.Application/MiniDddCqrsJwt.Application.csproj" />
+  <Project Path="MiniDddCqrsJwt.Domain/MiniDddCqrsJwt.Domain.csproj" />
+  <Project Path="MiniDddCqrsJwt.Infrastructure/MiniDddCqrsJwt.Infrastructure.csproj" />
+</Solution>
