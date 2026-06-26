@@ -1,0 +1,46 @@
+@EdmLearningAnalyticsDemo_HostAddress = http://localhost:5000
+
+GET {{EdmLearningAnalyticsDemo_HostAddress}}/
+Accept: application/json
+
+###
+
+GET {{EdmLearningAnalyticsDemo_HostAddress}}/api/competencies
+Accept: application/json
+
+###
+
+GET {{EdmLearningAnalyticsDemo_HostAddress}}/api/student-models
+Accept: application/json
+
+###
+
+GET {{EdmLearningAnalyticsDemo_HostAddress}}/api/student-models/S002
+Accept: application/json
+
+###
+
+GET {{EdmLearningAnalyticsDemo_HostAddress}}/api/analytics/cohort
+Accept: application/json
+
+###
+
+GET {{EdmLearningAnalyticsDemo_HostAddress}}/api/analytics/competency-gaps
+Accept: application/json
+
+###
+
+GET {{EdmLearningAnalyticsDemo_HostAddress}}/api/edm/interventions
+Accept: application/json
+
+###
+
+POST {{EdmLearningAnalyticsDemo_HostAddress}}/api/assessment/evaluate
+Content-Type: application/json
+
+{
+  "studentId": "S002",
+  "competencyCode": "C02",
+  "score": 5.8,
+  "maxScore": 10
+}
