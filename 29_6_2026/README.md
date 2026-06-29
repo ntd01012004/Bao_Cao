@@ -1,16 +1,16 @@
 # Student Skill Intelligence Demo
 
-Demo ASP.NET Core co Frontend va Backend cho cac chu de:
+Demo ASP.NET Core có Frontend và Backend:
 
 - Student Academic Data Modeling
 - Skill Mapping
 - Competency Profile Generation
 - Skill Inference
-- Swagger UI de test API
+- Swagger UI test API
 
-Project dung du lieu in-memory, khong can database.
+Project dùng dữ liệu in-memory, không cần database.
 
-## Cau truc
+## Cấu trúc
 
 ```text
 29_6_2026/
@@ -24,18 +24,18 @@ Project dung du lieu in-memory, khong can database.
     app.js
 ```
 
-## Yeu cau
+## Yêu cầu
 
-- .NET SDK 10.0 hoac moi hon
-- Trinh duyet web
+- .NET SDK 10.0 hoặc mới hơn
+- Trình duyệt web
 
-Kiem tra SDK:
+Kiểm tra SDK:
 
 ```powershell
 dotnet --version
 ```
 
-## Cach chay
+## Cách chạy
 
 ```powershell
 cd C:\Users\Lenovo\DemoNet8Api\29_6_2026
@@ -43,7 +43,7 @@ dotnet restore
 dotnet run --urls "http://localhost:5000"
 ```
 
-Mo trinh duyet:
+Mở trình duyệt:
 
 ```text
 Frontend: http://localhost:5000
@@ -51,20 +51,20 @@ Swagger:  http://localhost:5000/swagger
 Health:   http://localhost:5000/api/health
 ```
 
-Neu port `5000` dang duoc dung:
+Nếu port `5000` đang được dùng:
 
 ```powershell
 dotnet run --urls "http://localhost:5010"
 ```
 
-Sau do mo:
+Sau đó mở:
 
 ```text
 http://localhost:5010
 http://localhost:5010/swagger
 ```
 
-## API chinh
+## API chính
 
 ```text
 GET  /api/health
@@ -81,9 +81,9 @@ GET  /api/analytics/cohort
 GET  /api/analytics/skill-gaps
 ```
 
-## Vi du test POST tren Swagger
+## Ví dụ test POST trên Swagger
 
-Mo `http://localhost:5000/swagger`, chon `POST /api/skill-inference/evaluate`, bam `Try it out`, nhap:
+Mở `http://localhost:5000/swagger`, chọn `POST /api/skill-inference/evaluate`, bấm `Try it out`, nhập:
 
 ```json
 {
@@ -95,9 +95,9 @@ Mo `http://localhost:5000/swagger`, chon `POST /api/skill-inference/evaluate`, b
 }
 ```
 
-Response tra ve cac skill duoc suy luan tu assessment moi, muc do dong gop evidence va predicted level.
+Response trả về các skill được suy luận từ assessment mới, mức độ đóng góp evidence và predicted level.
 
-## Mo hinh xu ly
+## Mô hình xử lý
 
 ```text
 Student Academic Data
@@ -116,4 +116,4 @@ Competency Profile Generation
   Overall mastery, skill status, confidence, recommendations
 ```
 
-Nguong `Mastered` mac dinh la `70%`, `Emerging` la `55%`.
+Ngưỡng `Mastered` mặc định la `70%`, `Emerging` la `55%`.
