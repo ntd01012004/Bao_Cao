@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SkillLens - Nền tảng suy luận kỹ năng sinh viên</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#top" aria-label="SkillLens">
+      <span class="brand-mark">SL</span>
+      <span>
+        <strong>SkillLens</strong>
+        <small>Student Skill Intelligence</small>
+      </span>
+    </a>
+    <nav>
+      <a href="#solution">Giải pháp</a>
+      <a href="#dashboard">Dashboard</a>
+      <a href="#profiles">Hồ sơ năng lực</a>
+      <a class="nav-cta" href="/swagger">Swagger API</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Student Academic Data Modeling</p>
+        <h1>Nền tảng phân tích dữ liệu học tập và suy luận kỹ năng sinh viên</h1>
+        <p>SkillLens kết nối điểm số, môn học, hoạt động học tập và bản đồ kỹ năng để tạo hồ sơ năng lực, phát hiện khoảng trống kỹ năng và gợi ý can thiệp học tập.</p>
+        <div class="hero-actions">
+          <a class="button primary" href="#dashboard">Xem dashboard</a>
+          <a class="button secondary" href="/swagger">Test API</a>
+        </div>
+      </div>
+      <div class="metrics" id="metrics" aria-label="Chỉ số tổng quan"></div>
+    </section>
+
+    <section id="solution" class="section-band">
+      <div class="section-title">
+        <p class="eyebrow">Giới thiệu phần mềm</p>
+        <h2>Từ dữ liệu học tập rời rạc đến hồ sơ năng lực có thể hành động</h2>
+      </div>
+      <div class="feature-grid">
+        <article class="feature-card">
+          <span class="feature-icon">01</span>
+          <h3>Mô hình hóa dữ liệu học tập</h3>
+          <p>Chuẩn hóa hồ sơ sinh viên, điểm số, môn học, bài đánh giá và hoạt động học tập thành một mô hình dữ liệu thống nhất.</p>
+        </article>
+        <article class="feature-card">
+          <span class="feature-icon">02</span>
+          <h3>Ánh xạ kỹ năng</h3>
+          <p>Liên kết từng môn học và loại đánh giá với kỹ năng liên quan, kèm trọng số bằng chứng để tính mức độ thành thạo.</p>
+        </article>
+        <article class="feature-card">
+          <span class="feature-icon">03</span>
+          <h3>Tạo hồ sơ năng lực</h3>
+          <p>Tự động tổng hợp mastery, confidence, trạng thái kỹ năng và tài nguyên học tập phù hợp cho từng sinh viên.</p>
+        </article>
+        <article class="feature-card">
+          <span class="feature-icon">04</span>
+          <h3>Suy luận kỹ năng</h3>
+          <p>Kết hợp điểm đánh giá, hoạt động luyện tập và quan hệ tiên quyết để suy luận kỹ năng đã đạt, đang hình thành hoặc cần hỗ trợ.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="workflow">
+      <div class="workflow-step">
+        <span>Dữ liệu học tập</span>
+        <strong>GPA, điểm, môn học, hoạt động</strong>
+      </div>
+      <div class="workflow-step">
+        <span>Skill Mapping</span>
+        <strong>Assessment → Skill → Weight</strong>
+      </div>
+      <div class="workflow-step">
+        <span>Inference Engine</span>
+        <strong>Mastery, confidence, prerequisite</strong>
+      </div>
+      <div class="workflow-step">
+        <span>Competency Profile</span>
+        <strong>Hồ sơ năng lực và khuyến nghị</strong>
+      </div>
+    </section>
+
+    <section id="dashboard" class="dashboard-layout">
+      <div>
+        <div class="section-title">
+          <p class="eyebrow">Skill Mapping</p>
+          <h2>Bản đồ môn học, bài đánh giá và kỹ năng</h2>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Môn học</th>
+                <th>Bài đánh giá</th>
+                <th>Kỹ năng</th>
+                <th>Trọng số</th>
+                <th>Quan hệ</th>
+              </tr>
+            </thead>
+            <tbody id="skillMap"></tbody>
+          </table>
+        </div>
+      </div>
+
+      <aside id="inference" class="panel action-panel">
+        <p class="eyebrow">Skill Inference</p>
+        <h2>Thử suy luận từ điểm đánh giá mới</h2>
+        <form id="inferenceForm">
+          <label>
+            Sinh viên
+            <select name="studentId" id="studentSelect"></select>
+          </label>
+          <label>
+            Môn học
+            <select name="courseCode" id="courseSelect"></select>
+          </label>
+          <label>
+            Loại đánh giá
+            <select name="assessmentType" id="assessmentSelect"></select>
+          </label>
+          <div class="form-row">
+            <label>
+              Điểm
+              <input name="score" type="number" min="0" step="0.1" value="8">
+            </label>
+            <label>
+              Điểm tối đa
+              <input name="maxScore" type="number" min="1" step="0.1" value="10">
+            </label>
+          </div>
+          <button type="submit">Suy luận kỹ năng</button>
+        </form>
+        <pre id="inferenceResult" aria-live="polite"></pre>
+      </aside>
+    </section>
+
+    <section class="analytics-layout">
+      <div class="section-title full">
+        <p class="eyebrow">Learning Analytics</p>
+        <h2>Theo dõi phân bố năng lực và khoảng trống kỹ năng</h2>
+      </div>
+      <div class="panel">
+        <h3>Phân bố hồ sơ năng lực</h3>
+        <div class="bars" id="profileDistribution"></div>
+      </div>
+      <div class="panel">
+        <h3>Kỹ năng cần ưu tiên</h3>
+        <div class="gap-list" id="skillGaps"></div>
+      </div>
+    </section>
+
+    <section id="profiles">
+      <div class="section-title">
+        <p class="eyebrow">Competency Profile Generation</p>
+        <h2>Hồ sơ năng lực sinh viên</h2>
+      </div>
+      <div class="profile-grid" id="profilesGrid"></div>
+    </section>
+  </main>
+
+  <script src="/app.js"></script>
+</body>
+</html>

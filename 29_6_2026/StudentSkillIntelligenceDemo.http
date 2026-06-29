@@ -1,0 +1,42 @@
+@StudentSkillIntelligenceDemo_HostAddress = http://localhost:5000
+
+GET {{StudentSkillIntelligenceDemo_HostAddress}}/api/health
+Accept: application/json
+
+###
+
+GET {{StudentSkillIntelligenceDemo_HostAddress}}/api/students/S002/academic-data
+Accept: application/json
+
+###
+
+GET {{StudentSkillIntelligenceDemo_HostAddress}}/api/skill-map
+Accept: application/json
+
+###
+
+GET {{StudentSkillIntelligenceDemo_HostAddress}}/api/competency-profiles/S003
+Accept: application/json
+
+###
+
+GET {{StudentSkillIntelligenceDemo_HostAddress}}/api/skill-inference/S001
+Accept: application/json
+
+###
+
+GET {{StudentSkillIntelligenceDemo_HostAddress}}/api/analytics/skill-gaps
+Accept: application/json
+
+###
+
+POST {{StudentSkillIntelligenceDemo_HostAddress}}/api/skill-inference/evaluate
+Content-Type: application/json
+
+{
+  "studentId": "S003",
+  "courseCode": "SE410",
+  "assessmentType": "ModelReport",
+  "score": 8.2,
+  "maxScore": 10
+}
