@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI Resume & Career Demo</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <div>
+      <h1>AI Resume & Career Demo</h1>
+      <p>Demo sinh CV, t&#7889;i &#432;u ATS, &#225;nh x&#7841; h&#7885;c thu&#7853;t sang ngh&#7873; nghi&#7879;p v&#224; g&#7907;i &#253; l&#7897; tr&#236;nh ngh&#7873; nghi&#7879;p.</p>
+    </div>
+    <nav>
+      <a href="/swagger" target="_blank" rel="noreferrer">Swagger</a>
+      <a href="/api/demo/samples" target="_blank" rel="noreferrer">JSON m&#7851;u</a>
+    </nav>
+  </header>
+
+  <main class="layout">
+    <section class="panel input-panel">
+      <div class="panel-heading">
+        <h2>H&#7891; s&#417; &#7913;ng vi&#234;n</h2>
+        <button id="loadSampleButton" type="button">N&#7841;p h&#7891; s&#417; m&#7851;u</button>
+      </div>
+
+      <label>
+        Ch&#7885;n h&#7891; s&#417; m&#7851;u
+        <select id="sampleProfile"></select>
+      </label>
+
+      <label>
+        H&#7885; t&#234;n
+        <input id="fullName" value="Nguyen Van A">
+      </label>
+
+      <label>
+        Email
+        <input id="email" value="nguyenvana@example.com">
+      </label>
+
+      <label>
+        Ng&#224;nh h&#7885;c
+        <input id="major" value="C&#244;ng ngh&#7879; th&#244;ng tin">
+      </label>
+
+      <label>
+        M&#7913;c kinh nghi&#7879;m
+        <select id="experienceLevel">
+          <option>Student</option>
+          <option>Intern</option>
+          <option>Fresher</option>
+          <option>Junior</option>
+        </select>
+      </label>
+
+      <label>
+        M&#244;n h&#7885;c
+        <textarea id="courses" rows="3">C&#417; s&#7903; d&#7919; li&#7879;u
+L&#7853;p tr&#236;nh h&#432;&#7899;ng &#273;&#7889;i t&#432;&#7907;ng
+L&#7853;p tr&#236;nh web</textarea>
+      </label>
+
+      <label>
+        K&#7929; n&#259;ng
+        <textarea id="skills" rows="3">C#
+SQL Server
+HTML
+CSS
+Git c&#417; b&#7843;n</textarea>
+      </label>
+
+      <label>
+        D&#7921; &#225;n
+        <textarea id="projects" rows="3">Website b&#225;n h&#224;ng c&#243; &#273;&#259;ng nh&#7853;p, gi&#7887; h&#224;ng, qu&#7843;n l&#253; s&#7843;n ph&#7849;m</textarea>
+      </label>
+
+      <label>
+        Ho&#7841;t &#273;&#7897;ng h&#7885;c thu&#7853;t / nh&#243;m
+        <textarea id="activities" rows="2">L&#224;m vi&#7879;c nh&#243;m trong &#273;&#7891; &#225;n m&#244;n h&#7885;c</textarea>
+      </label>
+
+      <label>
+        M&#7909;c ti&#234;u ngh&#7873; nghi&#7879;p
+        <input id="careerGoal" value="&#7912;ng tuy&#7875;n Backend Developer Intern">
+      </label>
+
+      <label>
+        V&#7883; tr&#237; &#7913;ng tuy&#7875;n
+        <input id="targetJobTitle" value="Backend Developer Intern">
+      </label>
+
+      <label>
+        M&#244; t&#7843; c&#244;ng vi&#7879;c
+        <textarea id="jobDescription" rows="5">Y&#234;u c&#7847;u C# ho&#7863;c Java, SQL database, REST API, Git, OOP. C&#243; project web l&#224; l&#7907;i th&#7871;.</textarea>
+      </label>
+
+      <div class="actions">
+        <button id="runButton" type="button">Ch&#7841;y demo AI Resume</button>
+      </div>
+    </section>
+
+    <section class="results">
+      <div class="status" id="status">S&#7861;n s&#224;ng ch&#7841;y pipeline.</div>
+
+      <div class="grid">
+        <article class="panel">
+          <h2>&#272;i&#7875;m ATS</h2>
+          <div class="score">
+            <span id="overallScore">--</span>
+            <small>/100</small>
+          </div>
+          <div class="meters">
+            <div><span>&#272;&#7897; ph&#7911; k&#7929; n&#259;ng</span><strong id="skillCoverage">--</strong></div>
+            <div><span>Kh&#7899;p t&#7915; kh&#243;a</span><strong id="keywordMatch">--</strong></div>
+            <div><span>Kh&#7843; n&#259;ng parse</span><strong id="parseability">--</strong></div>
+            <div><span>An to&#224;n &#273;&#7883;nh d&#7841;ng</span><strong id="formatSafety">--</strong></div>
+          </div>
+        </article>
+
+        <article class="panel">
+          <h2>Ph&#226;n t&#237;ch m&#244; t&#7843; c&#244;ng vi&#7879;c</h2>
+          <p id="jobSummary" class="muted">Ch&#432;a c&#243; d&#7919; li&#7879;u.</p>
+          <div id="requiredSkills" class="chips"></div>
+        </article>
+      </div>
+
+      <article class="panel">
+        <h2>CV &#273;&#432;&#7907;c sinh</h2>
+        <h3 id="resumeTitle">Ch&#432;a c&#243; b&#7843;n nh&#225;p</h3>
+        <p id="resumeSummary" class="summary"></p>
+        <h4>C&#225;c ph&#7847;n trong CV</h4>
+        <ol id="sections"></ol>
+        <h4>Bullet d&#7921; &#225;n</h4>
+        <ul id="projectBullets"></ul>
+        <h4>K&#7929; n&#259;ng trong CV</h4>
+        <div id="resumeSkills" class="chips"></div>
+      </article>
+
+      <div class="grid">
+        <article class="panel">
+          <h2>&#193;nh x&#7841; h&#7885;c thu&#7853;t sang ngh&#7873; nghi&#7879;p</h2>
+          <ul id="evidenceList"></ul>
+        </article>
+
+        <article class="panel">
+          <h2>G&#7907;i &#253; ngh&#7873; nghi&#7879;p</h2>
+          <div id="careerList" class="career-list"></div>
+        </article>
+      </div>
+
+      <article class="panel">
+        <h2>G&#7907;i &#253; t&#7889;i &#432;u</h2>
+        <ul id="advice"></ul>
+      </article>
+    </section>
+  </main>
+
+  <script src="/app.js"></script>
+</body>
+</html>

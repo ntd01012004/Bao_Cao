@@ -1,0 +1,32 @@
+@baseUrl = http://localhost:5000
+
+GET {{baseUrl}}/api/health
+Accept: application/json
+
+###
+
+GET {{baseUrl}}/api/demo/sample
+Accept: application/json
+
+###
+
+POST {{baseUrl}}/api/pipeline/run
+Content-Type: application/json
+
+{
+  "profile": {
+    "fullName": "Nguyen Van A",
+    "email": "nguyenvana@example.com",
+    "major": "Cong nghe thong tin",
+    "experienceLevel": "Student",
+    "courses": ["Co so du lieu", "Lap trinh huong doi tuong", "Lap trinh web"],
+    "skills": ["C#", "SQL Server", "HTML", "CSS", "Git basic"],
+    "projects": ["Website ban hang co dang nhap, gio hang, quan ly san pham"],
+    "activities": ["Lam viec nhom trong do an mon hoc"],
+    "careerGoal": "Ung tuyen Backend Developer Intern"
+  },
+  "targetJobTitle": "Backend Developer Intern",
+  "jobDescription": "Yeu cau C# hoac Java, SQL database, REST API, Git, OOP. Co project web la loi the.",
+  "language": "English",
+  "preferOnePage": true
+}
